@@ -29,14 +29,19 @@ export default class PlayList extends Component {
       return results.json()
     }).then(data => {
       this.setState({songs: data})
+      console.log(data)
     })
   }
 
   render () {
     return (
       <div>
-        <h1>I am the PlayList</h1>
-        <PlayListItem />
+        <form onSubmit={this.fetchData}>
+          <button type='submit' className='btn btn-primary'>Update Playlist</button>
+        </form>
+        <div>
+          <PlayListItem songs={this.state.songs} />
+        </div>
       </div>
     )
   }
