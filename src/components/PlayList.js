@@ -10,7 +10,6 @@ export default class PlayList extends Component {
     this.state = {
       songs: [] // TODO: change to array or object probably
     }
-
     this.fetchData = this.fetchData.bind(this)
   }
 
@@ -35,7 +34,7 @@ export default class PlayList extends Component {
 
   render () {
     return (
-      <div>
+      <div className='playlist-stuff'>
         <form onSubmit={this.fetchData}>
           <button type='submit' className='btn btn-primary'>Update Playlist</button>
         </form>

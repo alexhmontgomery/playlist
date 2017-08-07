@@ -50,6 +50,7 @@ export default class PlayListForm extends Component {
     }
     ).then(response => {
       console.log(response, 'yay')
+      alert('Your song was successfully submitted!')
     }).catch(err => {
       console.log(err, 'boo!')
     })
@@ -58,7 +59,7 @@ export default class PlayListForm extends Component {
 
   render () {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.addToList} className='playlist-form'>
         <div className='form-group'>
           <label htmlFor='userName'>Username:</label>
           <input type='text' className='form-control' name='userName' placeholder='Enter username' onChange={this.handleNameChange} value={this.state.userName} />

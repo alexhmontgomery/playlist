@@ -3,14 +3,14 @@ import React, { Component } from 'react'
 export default class PlayListItem extends Component {
   render () {
     return (
-      <div>
+      <div className='cards-div'>
         {this.props.songs.map((song) =>
-          <div className='card' key={song._id}>
+          <div className='card card-outline-danger text-center' key={song._id}>
             <ul className='list-group list-group-flush'>
-              <li className='list-group-item'>User: {song.userName}</li>
-              <li className='list-group-item'>Artist/Band: {song.songArtist}</li>
-              <li className='list-group-item'>Title: {song.songTitle}</li>
-              <li className='list-group-item'>Notes: {song.songNotes}</li>
+              <li className='list-group-item'><strong>User:</strong> {song.userName}</li>
+              <li className='list-group-item'><strong>Artist/Band:</strong> {song.songArtist}</li>
+              <li className='list-group-item'><strong>Title:</strong> {song.songTitle}</li>
+              <li className='list-group-item'><strong>Notes:</strong> {song.songNotes}</li>
             </ul>
           </div>
         )}
